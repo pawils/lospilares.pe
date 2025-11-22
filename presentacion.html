@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Pilares Play Club - Deporte y Negocios</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos de emergencia para la presentación */
+        html { scroll-behavior: smooth; } /* Desplazamiento suave */
+        .landing-hero {
+            background: linear-gradient(rgba(10, 35, 66, 0.85), rgba(10, 35, 66, 0.85)), url('imagenes/banners/ai-generated.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 90vh; /* Ocupa casi toda la pantalla */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .landing-hero h1 { font-size: 3rem; color: white; margin-bottom: 20px; line-height: 1.1; }
+        
+        .split-section { display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; }
+        .split-col { padding: 60px 40px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+        
+        /* Usamos imágenes que sabemos que tienes */
+        .col-sport { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('imagenes/banners/running_1.jpg') no-repeat center/cover; }
+        .col-business { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('imagenes/banners/business_marketing_1.jpg') no-repeat center/cover; }
+        
+        .split-content { position: relative; z-index: 2; color: white; max-width: 500px; }
+        .split-content h2 { color: white; font-size: 2.5rem; margin-bottom: 15px; }
+        .split-content p { font-size: 1.2rem; margin-bottom: 25px; color: #f0f0f0; }
+
+        .contact-mini { background: #f7f7f7; padding: 80px 20px; text-align: center; }
+        
+        /* Ajuste móvil */
+        @media (max-width: 768px) {
+            .landing-hero h1 { font-size: 2.2rem; }
+            .split-section { grid-template-columns: 1fr; }
+            .split-col { padding: 80px 20px; text-align: center; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header style="position: absolute; width: 100%; top: 0; padding: 20px; z-index: 100;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+            <img src="imagenes/logos/Modif_Logotipo_LosPilares_2025_4.png" alt="Logo" style="height: 50px;">
+            <a href="#contacto" class="cta-button">Contacto</a>
+        </div>
+    </header>
+
+    <section class="landing-hero">
+        <div class="fade-in visible">
+            <span class="category-tag" style="background:#ff6200; padding: 5px 10px; font-weight:bold; border-radius:4px;">LOS PILARES.PE</span>
+            <h1 style="margin-top:20px;">Potencia tu Talento en <br>Deporte y Negocios</h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.9;">
+                La plataforma integral que une el alto rendimiento deportivo con estrategias empresariales de vanguardia.
+            </p>
+            <div style="gap: 15px; display: flex; justify-content: center; flex-wrap: wrap;">
+                <a href="#servicios" class="cta-button primary hero-cta">Ver Servicios</a>
+                <a href="https://wa.me/+51987495017?text=Hola,%20me%20interesa%20saber%20más%20sobre%20Los%20Pilares" target="_blank" class="cta-button secondary hero-cta" style="border: 2px solid white; color: white; background:transparent;">Hablemos</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="split-section">
+        <div class="split-col col-sport">
+            <div class="split-content fade-in visible">
+                <span class="category-tag" style="background: #ff6200; padding: 2px 8px; border-radius: 4px;">DEPORTES</span>
+                <h2>Running & Bienestar</h2>
+                <p>Planes de entrenamiento personalizados y herramientas para corredores. Entrena como un profesional.</p>
+                <a href="https://wa.me/+51987495017?text=Hola,%20quiero%20información%20sobre%20los%20planes%20de%20Running" target="_blank" class="cta-button primary">Solicitar Info Running</a>
+            </div>
+        </div>
+        <div class="split-col col-business">
+            <div class="split-content fade-in visible">
+                <span class="category-tag" style="background: #ff6200; padding: 2px 8px; border-radius: 4px;">EMPRESAS</span>
+                <h2>Marketing & Consultoría</h2>
+                <p>Estrategias digitales, Google Ads y desarrollo web para posicionar tu marca en el mercado.</p>
+                <a href="https://wa.me/+51987495017?text=Hola,%20me%20interesa%20una%20consultoría%20para%20mi%20empresa" target="_blank" class="cta-button primary">Consultoría Empresarial</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact-mini">
+        <h2 style="color: #1c2e58; font-size: 2.5rem;">¿Listo para empezar?</h2>
+        <p style="margin-bottom: 30px; color: #666; font-size: 1.2rem;">
+            Actualmente estamos actualizando nuestra plataforma web para ofrecerte una mejor experiencia.<br>
+            Mientras tanto, contáctanos directamente:
+        </p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="mailto:pawil@pawil.pe" class="cta-button primary hero-cta">pawil@pawil.pe</a>
+            <a href="https://wa.me/+51987495017" target="_blank" class="cta-button primary hero-cta" style="background-color: #25D366;">WhatsApp</a>
+        </div>
+    </section>
+
+    <footer style="background: #1c2e58; color: white; text-align: center; padding: 20px;">
+        <p>© 2025 Los Pilares Play Club. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
